@@ -3,11 +3,12 @@
 // Created by: Mr. Coxall
 // Created on: Sep 2020
 // This file contains the JS functions for index.html
+
 import SplashScene from './splashScene.js';
-import TitleScene from './titleScene.js';
+import SplashScene from './titleScene.js';
 
 const splashScene = new SplashScene();
-const titleScene = new TitleScene();
+const titleScene = new SplashScene();
 
 const config = {
     type: Phaser.AUTO,
@@ -19,7 +20,7 @@ const config = {
             debug: true
         }
     },
-    backgroundColor: 0xffffff,
+    backgroundColor: 0xfffff,
     scale: {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH,
@@ -28,11 +29,8 @@ const config = {
 
 const game = new Phaser.Game(config);
 
-
 //* Game scenes */
 game.scene.add('splashScene', splashScene);
-game.scene.add('titleScene', titleScene);
-//* game title */
-game.scene.start('splashScene');
-
-
+game.scene.add('titleScene', splashScene);
+// start title
+game.scene.start('splashScene')

@@ -2,7 +2,7 @@
 //
 // Created by: Mr. Coxall
 // Created on: Sep 2020
-// This file contains the JS functions for index.html
+// This is the Title scene
 
 
 class TitleScene extends Phaser.Scene {
@@ -12,7 +12,7 @@ class TitleScene extends Phaser.Scene {
   
   
     init (data) {
-    this.cameras.main.setBackgroundColor("ffffff");
+    this.cameras.main.setBackgroundColor("#ffffff");
     }
   
     preload() {
